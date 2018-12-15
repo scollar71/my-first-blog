@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
 from django.utils import timezone
@@ -6,6 +7,9 @@ from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
 
+
+def index(request):
+    return HttpResponse('index view...')
 
 
 def post_list(request):
